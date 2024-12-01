@@ -20,7 +20,7 @@ int main()
 #if 0
    code
 #endif 
-你可以把 #if 0 改成 #if 1 来执行 code 的代码。
+可以把 #if 0 改成 #if 1 来执行 code 的代码。
 这种形式对程序调试也可以帮助，测试时使用 #if 1 来执行测试代码，发布后使用 #if 0 来屏蔽测试代码。
 #if 后可以是任意的条件语句。
 下面的代码如果 condition 条件为 true 执行 code1 ，否则执行 code2。
