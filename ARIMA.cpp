@@ -25,7 +25,9 @@ void readData(const string& filename, vector<double>& altitudes) {
 // 综合来说，const string& filename是一个常量引用，意味着你传递给readData函数的是一个字符串（通常是文件的路径），并且函数不会修改这个字符串。
 
 // 2. vector<double>& altitudes
-// vector<double>：这是一个vector容器，vector是C++标准库中的动态数组容器，可以存储多个double类型的元素。在这个例子中，altitudes是一个存储double值的vector，这些值代表读取的高度（alt）。
+// vector<double>：这是一个vector容器，可以存储多个double类型的元素。在这个例子中，altitudes是一个存储double值的vector，这些值代表读取的高度（alt）。
+    // C++ 标准库（Standard Template Library, STL）是 C++ 的一个重要组成部分，它提供了一组通用的模板类和函数，用于处理数据集合。<vector> 是 STL 中的一个容器类，用于存储动态大小的数组。
+    // <vector> 是一个序列容器，它允许用户在容器的末尾快速地添加或删除元素。与数组相比，<vector> 提供了更多的功能，如自动调整大小、随机访问等。
 // &：同样表示传递的是引用，也就是说，readData函数会直接修改传入的altitudes容器的内容，而不是该容器的副本。
 // 没有const：这意味着altitudes是一个可以被修改的容器，函数内部会直接向这个容器添加高度数据。
     
