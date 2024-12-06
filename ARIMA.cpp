@@ -60,9 +60,15 @@ void readData(const string& filename, vector<double>& altitudes) {
 // ARIMA模型拟合：差分处理，AR和MA部分的简单实现
 class ARIMA {
 public:
+// 关键字 public 确定了类成员的访问属性。在类对象作用域内，公共成员在类的外部是可访问的。、
+// 也可以指定类的成员为 private 或 protected，私有的成员和受保护的成员不能使用直接成员访问运算符 (.) 来直接访问。
+// 默认情况下是定义为 private。
     ARIMA(int p, int d, int q) : p(p), d(d), q(q) {}
+    // 类的构造函数是类的一种特殊的成员函数，它会在每次创建类的新对象时执行。
+    // 构造函数的名称与类的名称是完全相同的，并且不会返回任何类型，也不会返回 void。构造函数可用于为某些成员变量设置初始值。
+    // 这里使用初始化列表来初始化字段， : p(p), d(d), q(q) {} 等价于 {p=p; d=d; q=q;}
 
-    // 差分处理
+    // 用于差分处理的成员函数
     vector<double> difference(const vector<double>& series, int d) {
         vector<double> diff_series = series;
         for (int i = 0; i < d; i++) {
